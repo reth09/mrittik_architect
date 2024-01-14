@@ -26,7 +26,7 @@ html{
     --gray: #f2f2f2;
     --olive:#a6a182;
     --green: #0a1607;
-    --gutter-width:10px;
+    
 }
 /* roots end */
 
@@ -109,6 +109,10 @@ body{
 
 /* header start */
 
+.head{
+    position: relative;
+}
+
 header{
     top: 0px;
     position: fixed;
@@ -140,15 +144,66 @@ header{
         letter-spacing: 3px;
 }
 
+.head i{
+    color: var(--white);
+}
 
+.head .bars{
+    position: absolute;
+    right: 25px;
+    top: 40%;
+}
+
+.bars:hover .drop-down{
+    display: block;
+    right: -25px;
+    top: -42px;
+    width: 300px;
+    height: 350px;
+}
+
+.bars{
+    display: none;
+}
+
+.nav-bar{
+    position: relative;
+}
+
+.drop-down{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--dark);
+    text-align: center;
+    display: none;
+    transition: all 2s ease;
+}
+
+.drop-down h3{
+    color: var(--white);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.dd-menu li{
+    padding-top: 10%;
+}
+
+.dd-menu li a{
+    color: var(--gray-600);
+    font-weight: 600;
+}
 
 /* header end */
 
 /* main banner */
 
 .main-b-top{
-    width: 100%;
     background: var(--black);
+    margin: auto;
 }
 
 .main-banner{
@@ -169,7 +224,7 @@ header{
     height: 100%;
     object-fit: cover;
     transition: 1s all ease;
-    position: absolute;
+    position: relative;
     margin-top: 2%;
 }
 
@@ -185,7 +240,7 @@ header{
     background-color: var(--dark);
     position: absolute;
     top: 38%;
-    right:-3%;
+    right:0%;
     transition: 0.5s all ease;
 }
 
@@ -340,6 +395,7 @@ header{
     padding:130px 0px;
     position: relative;
     z-index: 1;
+    margin: auto;
 }
 
 .ab-sec2{
@@ -382,6 +438,7 @@ header{
 .about-banner{
     position: relative;
     z-index: 1;
+    margin: auto;
 }
 
 .about-banner img{
@@ -453,7 +510,6 @@ header{
 /* section 3 starts */
 
     .ab-sec3 video{
-        width: 95%;
         padding: 50px 0px;
         display: block;
         margin: 0px auto;
@@ -476,7 +532,7 @@ header{
     }
 
     .fact-content{
-        padding: 20px 20px;
+        padding: 20px 0px 20px 10px;
     }
 /* section 3 ends */
 
@@ -488,6 +544,7 @@ header{
         position: relative;   
         padding: 100px 0px;
         z-index: 1;
+        margin: auto;
     }
 
     .mri-arch .big-font h2{
@@ -627,7 +684,7 @@ header{
 .home-fact{
     position: relative;
     color: var(--white);
-    padding: 90px 14%;
+    padding: 5% 14%;
     background-image: url(../images/bg-design.jpg);
     background-position: center;
     background-size: cover;
@@ -733,6 +790,7 @@ header{
         z-index: 1;
         position: relative;
         padding: 100px 0px;
+        margin: auto;
     }
 
     .running_projects .big_fonts{
@@ -1161,7 +1219,6 @@ header{
 /* quote */
 
 .quote{
-    width: 85%;
     position: relative;
     z-index: 1;
     margin: 50px auto;
@@ -1480,15 +1537,6 @@ header{
         font-size: 16px;
         line-height: 25px;
     }
-
-    .form .partners{
-        padding-top: 90px;
-    }
-
-    .form .partners .pi1 img{
-        opacity: 0.8;
-    }
-
 
 /* form ends */
 
